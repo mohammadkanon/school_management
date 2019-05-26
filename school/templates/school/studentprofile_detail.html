@@ -1,0 +1,9 @@
+{% extends "school/base.html" %}
+
+{% block content %}
+    <h2>{{ this_student.first_name }} {{ this_student.last_name }}</h2>
+    <p>{{ this_student.gender }}</p>
+    <p>{{ this_student.date_of_birth }}</p>
+    <a href="{% url 'update-profile' this_student.pk %}"><button>Edit</button></a>
+    <a href="{% url 'delete-profile' this_student.pk %}"><button>Delete</button></a>
+{% endblock %}
